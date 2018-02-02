@@ -1,0 +1,123 @@
+2018-01-25 11:05:29,074 ERROR: Exception on /fcm [GET] 
+ 		 [in e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\urllib3\connectionpool.py", line 595, in urlopen
+    self._prepare_proxy(conn)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\urllib3\connectionpool.py", line 816, in _prepare_proxy
+    conn.connect()
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x053B05D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='fcm.googleapis.com', port=443): Max retries exceeded with url: /fcm/send (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x053B05D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "E:\Python Course\flask\pehlaFlask\app\routes.py", line 120, in send_fcm
+    result = push_service.notify_single_device(registration_id=registration_id, message_title=message_title, message_body=message_body)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\pyfcm\fcm.py", line 94, in notify_single_device
+    self.send_request([payload], timeout)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\pyfcm\baseapi.py", line 212, in send_request
+    response = self.do_request(payload, timeout)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\pyfcm\baseapi.py", line 200, in do_request
+    proxies=self.FCM_REQ_PROXIES, timeout=timeout)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\requests\adapters.py", line 502, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='fcm.googleapis.com', port=443): Max retries exceeded with url: /fcm/send (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x053B05D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',)))
+2018-01-25 11:07:14,717 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 11:07:50,210 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 11:08:05,211 ERROR: Exception on /fcm [GET] 
+ 		 [in e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1615, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1630, in finalize_request
+    response = self.make_response(rv)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1725, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+2018-01-25 11:10:25,957 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 11:11:15,963 ERROR: Exception on /fcm [GET] 
+ 		 [in e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "E:\Python Course\flask\pehlaFlask\app\routes.py", line 122, in send_fcm
+    return render_template(url_for("index"))
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: /index
