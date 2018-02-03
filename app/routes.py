@@ -186,7 +186,6 @@ def each_product(category, product_id):
 @app_instance.route("/testing")
 def testing():
     #..
-<<<<<<< HEAD
     return render_template("cart.html")
 
 @app_instance.route("/weather")
@@ -222,6 +221,3 @@ def fertilisers():
 
 
     
-=======
-    return render_template("fertilisers.html")
->>>>>>> bitbucket/batra3
