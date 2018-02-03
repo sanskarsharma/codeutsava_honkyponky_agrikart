@@ -57,11 +57,11 @@ class Product(db_instance.Model):
     category = db_instance.Column(db_instance.String)
     mrp = db_instance.Column(db_instance.Integer)
     offer_price = db_instance.Column(db_instance.Integer)
-    cod_eligible = db_instance.Column(db_instance.Boolean) # 0/1
+    cod_eligible = db_instance.Column(db_instance.Integer) # 0/1
     seller_id = db_instance.Column(db_instance.String)
     details = db_instance.Column(db_instance.String)
     delivery_cost = db_instance.Column(db_instance.Integer)
-    returnable = db_instance.Column(db_instance.Boolean)
+    returnable = db_instance.Column(db_instance.Integer)
     availability = db_instance.Column(db_instance.Integer) # num of units 
     rating = db_instance.Column(db_instance.Integer)
     imagepath = db_instance.Column(db_instance.String)

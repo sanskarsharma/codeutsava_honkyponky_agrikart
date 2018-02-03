@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 </head>
 <body>
-<form class="form-horizontal">
+<form class="form-horizontal" action="/addproduct", method="POST">
 <fieldset>
 
 <!-- Form Name -->
 <legend> Product Details </legend>
+
 
 <!-- Text input-->
 <div class="form-group">
@@ -56,11 +57,11 @@
   <label class="col-md-4 control-label" for="cod_eligible">COD Availability</label>
   <div class="col-md-8"> 
     <label class="radio-inline" for="cod_eligible-0">
-      <input type="radio" name="cod_eligible" id="cod_eligible-0" value="True" checked="checked">
+      <input type="radio" name="cod_eligible" id="cod_eligible-0" value="1" checked="checked">
       Yes
     </label> 
     <label class="radio-inline" for="cod_eligible-1">
-      <input type="radio" name="cod_eligible" id="cod_eligible-1" value="False">
+      <input type="radio" name="cod_eligible" id="cod_eligible-1" value="0">
       No
     </label>
   </div>
@@ -99,11 +100,11 @@
   <label class="col-md-4 control-label" for="returnable">Return </label>
   <div class="col-md-8"> 
     <label class="radio-inline" for="returnable-0">
-      <input type="radio" name="returnable" id="returnable-0" value="True" checked="checked">
+      <input type="radio" name="returnable" id="returnable-0" value="true" checked="checked">
       Yes
     </label> 
     <label class="radio-inline" for="returnable-1">
-      <input type="radio" name="returnable" id="returnable-1" value="False">
+      <input type="radio" name="returnable" id="returnable-1" value="0">
       No
     </label>
   </div>
@@ -119,6 +120,8 @@
 </div>
 
 </fieldset>
+
+<button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </body>
 </html>
