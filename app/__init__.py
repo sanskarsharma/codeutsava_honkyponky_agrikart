@@ -38,12 +38,12 @@ if not app_instance.debug:
 		# 	app_instance.logger.addHandler(mail_handler)
 
 		# below code is for writing log files
-		if not os.path.exists('logs'):
-			os.mkdir('logs')
-		file_handler = RotatingFileHandler('logs/microblog.log', maxBytes=10240, backupCount=10)
-		file_handler.setFormatter(logging.Formatter('%(asctime)s %(levelname)s: %(message)s \n \t\t [in %(pathname)s:%(lineno)d]'))
-		file_handler.setLevel(logging.INFO)
-		app_instance.logger.addHandler(file_handler)
+		# if not os.path.exists('logs'):
+		# 	os.mkdir('logs')
+		# file_handler = RotatingFileHandler('logs/microblog.log', maxBytes=10240, backupCount=10)
+		# file_handler.setFormatter(logging.Formatter('%(asctime)s %(levelname)s: %(message)s \n \t\t [in %(pathname)s:%(lineno)d]'))
+		# file_handler.setLevel(logging.INFO)
+		# app_instance.logger.addHandler(file_handler)
 
-		app_instance.logger.setLevel(logging.INFO)
-		app_instance.logger.info('Microblog startup')
+		# app_instance.logger.setLevel(logging.INFO)
+		# app_instance.logger.info('Microblog startup')

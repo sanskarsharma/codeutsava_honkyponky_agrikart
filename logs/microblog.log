@@ -56,3 +56,5 @@ jinja2.exceptions.TemplateNotFound: cart.html
  		 [in D:\codeutsava2\app\__init__.py:49]
 2018-02-03 19:15:47,556 INFO: Microblog startup 
  		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 19:53:48,967 INFO: Microblog startup 
+ 		 [in E:\codeutsavaproj\ecommerce_flask\app\__init__.py:49]

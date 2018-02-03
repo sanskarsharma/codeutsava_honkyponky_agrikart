@@ -8,3 +8,4 @@ app/__pycache__
 .vscode\ 
 logs 
 logs/ 
+logs 

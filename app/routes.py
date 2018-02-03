@@ -172,17 +172,9 @@ def products_by_category():
     return render_template("products_by_category.html", products=products)
 
 @app_instance.route("/products/<category>/<product_id>")
-def products_by_category():
+def each_product():
     products = Product.query.filter_by(product_id=product_id)
     return render_template("_product.html", product=product)
-
-
-@app_instance.route("/testing")
-def testing():
-    #..
-    return render_template("products_by_category.html", products=products)
-
-
 
 
 @app_instance.route("/testing")
