@@ -214,6 +214,10 @@ def weather():
 
     return res
 
+@app_instance.route("/fertilisers.html")
+def fertilisers():
+    return render_template("fertilisers.html")
+
 
 
     
