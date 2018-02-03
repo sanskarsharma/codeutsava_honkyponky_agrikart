@@ -6,6 +6,7 @@ from app.models import *
 from werkzeug.urls import url_parse
 from datetime import datetime
 import time
+from app.static import *
 
 from pyfcm import FCMNotification
 
@@ -108,7 +109,7 @@ def send_fcm():
     # OR initialize with proxies
 
     proxy_dict = {
-            
+
             }
     push_service = FCMNotification(api_key="AAAAbEgDzzU:APA91bEkITOc5PMGLwAwyoUtMFF7vCcNBikr30eUW6HglasaSBdqtQEzb9NtKR_fZrVY-yw0ZicDdeSi7ptWKpB_tcxVTX_a55EFgXg-_MgoqQn8uGcrad4jHr_eNvKzgBkFB6cPp45A", proxy_dict=proxy_dict)
 
@@ -146,7 +147,7 @@ def add_product():
         delivery_cost = request.form.get("delivery_cost")
 
         returnable = request.form.get("returnable")
-        availability = request.form.get("availability") 
+        availability = request.form.get("availability")
         rating = request.form.get("rating")
         imagepath = request.form.get("imagepath")
 
@@ -184,10 +185,7 @@ def testing():
 
 
 
-
-
-
-
-
-
-
+@app_instance.route("/testing")
+def testing():
+    #..
+    return render_template("cart.html")

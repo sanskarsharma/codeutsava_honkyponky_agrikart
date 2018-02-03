@@ -1,79 +1,58 @@
-2018-02-03 18:49:12,556 ERROR: Exception on /addproduct [POST] 
- 		 [in e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\flask\app.py:1560]
+2018-02-03 18:11:57,564 ERROR: Exception on /testing [GET] 
+ 		 [in d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\engine\base.py", line 1127, in _execute_context
-    context = constructor(dialect, self, conn, *args)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\engine\default.py", line 667, in _init_compiled
-    param.append(processors[key](compiled_params[key]))
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\sql\sqltypes.py", line 1676, in process
-    value = _strict_as_bool(value)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\sql\sqltypes.py", line 1653, in _strict_as_bool
-    "Not a boolean value: %r" % value)
-TypeError: Not a boolean value: 'true'
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\flask\_compat.py", line 33, in reraise
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\_compat.py", line 33, in reraise
     raise value
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
     rv = self.dispatch_request()
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "E:\codeutsavaproj\ecommerce_flask\app\routes.py", line 157, in add_product
-    db_instance.session.commit()
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\scoping.py", line 153, in do
-    return getattr(self.registry(), name)(*args, **kwargs)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\session.py", line 937, in commit
-    self.transaction.commit()
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\session.py", line 461, in commit
-    self._prepare_impl()
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\session.py", line 441, in _prepare_impl
-    self.session.flush()
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\session.py", line 2237, in flush
-    self._flush(objects)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\session.py", line 2363, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 66, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\util\compat.py", line 187, in reraise
-    raise value
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\session.py", line 2327, in _flush
-    flush_context.execute()
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 391, in execute
-    rec.execute(self)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 556, in execute
-    uow
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\persistence.py", line 181, in save_obj
-    mapper, table, insert)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\persistence.py", line 866, in _emit_insert_statements
-    execute(statement, params)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\engine\base.py", line 948, in execute
-    return meth(self, multiparams, params)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\sql\elements.py", line 269, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\engine\base.py", line 1060, in _execute_clauseelement
-    compiled_sql, distilled_params
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\engine\base.py", line 1132, in _execute_context
-    None, None)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\engine\base.py", line 1413, in _handle_dbapi_exception
-    exc_info
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\util\compat.py", line 203, in raise_from_cause
-    reraise(type(exception), exception, tb=exc_tb, cause=cause)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\util\compat.py", line 186, in reraise
-    raise value.with_traceback(tb)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\engine\base.py", line 1127, in _execute_context
-    context = constructor(dialect, self, conn, *args)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\engine\default.py", line 667, in _init_compiled
-    param.append(processors[key](compiled_params[key]))
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\sql\sqltypes.py", line 1676, in process
-    value = _strict_as_bool(value)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\sql\sqltypes.py", line 1653, in _strict_as_bool
-    "Not a boolean value: %r" % value)
-sqlalchemy.exc.StatementError: (builtins.TypeError) Not a boolean value: 'true' [SQL: 'INSERT INTO product (name, category, mrp, offer_price, cod_eligible, seller_id, details, delivery_cost, returnable, availability, rating, imagepath) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'] [parameters: [{'returnable': 'true', 'delivery_cost': '56', 'category': '1', 'availability': '55', 'details': 'kuk', 'mrp': '7', 'cod_eligible': 'true', 'offer_price': '89', 'imagepath': 'jygvjy', 'name': 'jygy', 'rating': None, 'seller_id': None}]]
+  File "D:\codeutsava2\app\routes.py", line 178, in testing
+    return render_template("cart.html")
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: cart.html
+2018-02-03 18:13:58,613 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 18:16:18,126 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 18:30:03,957 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 18:39:40,520 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 18:49:57,815 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 18:57:57,924 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 18:58:49,892 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 19:02:12,988 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 19:07:40,243 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 19:10:42,154 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 19:12:18,847 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 19:14:36,644 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 19:15:47,556 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]

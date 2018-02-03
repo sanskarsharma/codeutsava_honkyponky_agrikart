@@ -1,20 +1,11 @@
-2018-02-03 18:43:52,805 ERROR: Exception on /addproduct [POST] 
- 		 [in e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\flask\app.py:1560]
+2018-01-25 11:12:32,782 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 11:28:05,511 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 11:28:29,569 ERROR: Exception on /fcm [GET] 
+ 		 [in e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\engine\base.py", line 1127, in _execute_context
-    context = constructor(dialect, self, conn, *args)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\engine\default.py", line 667, in _init_compiled
-    param.append(processors[key](compiled_params[key]))
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\sql\sqltypes.py", line 1676, in process
-    value = _strict_as_bool(value)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\sql\sqltypes.py", line 1653, in _strict_as_bool
-    "Not a boolean value: %r" % value)
-TypeError: Not a boolean value: 'True'
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
   File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
     rv = self.handle_user_exception(e)
@@ -26,56 +17,136 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "E:\codeutsavaproj\ecommerce_flask\app\routes.py", line 157, in add_product
-    db_instance.session.commit()
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\scoping.py", line 153, in do
-    return getattr(self.registry(), name)(*args, **kwargs)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\session.py", line 937, in commit
-    self.transaction.commit()
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\session.py", line 461, in commit
-    self._prepare_impl()
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\session.py", line 441, in _prepare_impl
-    self.session.flush()
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\session.py", line 2237, in flush
-    self._flush(objects)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\session.py", line 2363, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 66, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\util\compat.py", line 187, in reraise
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "E:\Python Course\flask\pehlaFlask\app\routes.py", line 130, in send_fcm
+    print(result + str("\n\n done"))
+TypeError: unsupported operand type(s) for +: 'dict' and 'str'
+2018-01-25 11:30:24,842 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 11:34:16,932 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 12:19:58,307 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 12:30:11,071 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 12:31:12,823 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 12:31:24,379 ERROR: Exception on /fcm [GET] 
+ 		 [in e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\_compat.py", line 33, in reraise
     raise value
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\session.py", line 2327, in _flush
-    flush_context.execute()
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 391, in execute
-    rec.execute(self)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 556, in execute
-    uow
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\persistence.py", line 181, in save_obj
-    mapper, table, insert)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\orm\persistence.py", line 866, in _emit_insert_statements
-    execute(statement, params)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\engine\base.py", line 948, in execute
-    return meth(self, multiparams, params)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\sql\elements.py", line 269, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\engine\base.py", line 1060, in _execute_clauseelement
-    compiled_sql, distilled_params
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\engine\base.py", line 1132, in _execute_context
-    None, None)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\engine\base.py", line 1413, in _handle_dbapi_exception
-    exc_info
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\util\compat.py", line 203, in raise_from_cause
-    reraise(type(exception), exception, tb=exc_tb, cause=cause)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\util\compat.py", line 186, in reraise
-    raise value.with_traceback(tb)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\engine\base.py", line 1127, in _execute_context
-    context = constructor(dialect, self, conn, *args)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\engine\default.py", line 667, in _init_compiled
-    param.append(processors[key](compiled_params[key]))
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\sql\sqltypes.py", line 1676, in process
-    value = _strict_as_bool(value)
-  File "e:\codeutsavaproj\ecommerce_flask\pehla_virtualenv\lib\site-packages\sqlalchemy\sql\sqltypes.py", line 1653, in _strict_as_bool
-    "Not a boolean value: %r" % value)
-sqlalchemy.exc.StatementError: (builtins.TypeError) Not a boolean value: 'True' [SQL: 'INSERT INTO product (name, category, mrp, offer_price, cod_eligible, seller_id, details, delivery_cost, returnable, availability, rating, imagepath) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'] [parameters: [{'delivery_cost': '58', 'details': 'jhvjkhv', 'mrp': '9', 'name': 'khvbk', 'imagepath': 'ykjkvb', 'cod_eligible': 'True', 'offer_price': '8', 'category': '1', 'returnable': 'True', 'availability': '45', 'seller_id': None, 'rating': None}]]
-2018-02-03 18:45:34,966 INFO: Microblog startup 
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "E:\Python Course\flask\pehlaFlask\app\routes.py", line 124, in send_fcm
+    result = push_service.notify_single_device(registration_id=registration_id, message_body=message_body, data_message=data_message)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\pyfcm\fcm.py", line 92, in notify_single_device
+    **extra_kwargs)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\pyfcm\baseapi.py", line 141, in parse_payload
+    raise InvalidDataError("Provided data_message is in the wrong format")
+pyfcm.errors.InvalidDataError: Provided data_message is in the wrong format
+2018-01-25 12:32:13,620 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 13:09:01,448 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 13:10:55,017 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 13:18:52,968 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 13:20:37,819 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 13:23:41,635 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 13:31:38,887 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 13:32:37,307 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 13:33:14,434 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 13:34:29,635 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 13:43:44,139 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 21:34:27,950 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 21:43:03,999 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 21:45:45,772 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 21:47:20,971 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 21:49:15,663 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 21:50:50,756 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 23:10:54,161 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 23:17:54,526 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-25 23:21:25,558 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-26 00:14:20,384 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-26 02:48:03,571 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-26 03:25:13,140 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-26 03:25:21,029 ERROR: Exception on /fcm [GET] 
+ 		 [in e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "E:\Python Course\flask\pehlaFlask\app\routes.py", line 125, in send_fcm
+    result = push_service.notify_single_device(registration_id=registration_id, message_body=message_body, data_message=data_message)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\pyfcm\fcm.py", line 92, in notify_single_device
+    **extra_kwargs)
+  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\pyfcm\baseapi.py", line 141, in parse_payload
+    raise InvalidDataError("Provided data_message is in the wrong format")
+pyfcm.errors.InvalidDataError: Provided data_message is in the wrong format
+2018-01-26 03:26:31,755 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-26 03:40:05,061 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-26 04:21:35,085 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-26 13:33:54,168 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-26 13:37:20,708 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-26 13:40:06,010 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-26 13:43:00,421 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-26 13:45:12,794 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-01-26 13:48:36,069 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-02-02 21:31:33,855 INFO: Microblog startup 
+ 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
+2018-02-03 03:23:36,167 INFO: Microblog startup 
+ 		 [in E:\codeutsavaproj\ecommerce_flask\app\__init__.py:49]
+2018-02-03 03:57:14,623 INFO: Microblog startup 
  		 [in E:\codeutsavaproj\ecommerce_flask\app\__init__.py:49]
