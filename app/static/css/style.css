@@ -193,15 +193,15 @@ a.morebtn:hover{
 	width:31%;
 }
 .grid1{
-	background:url(../images/images1.jpg) no-repeat;
+	background:url(../images/images1_1.jpg) no-repeat;
 	background-size: cover;
 }
 .grid2{
-	background:url(../images/images3.jpg) no-repeat;
+	background:url(../images/images3_1.jpg) no-repeat;
 	background-size: cover;
 }
 .grid3{
-	background:url(../images/images5.jpg) no-repeat;
+	background:url(../images/images5_1.jpg) no-repeat;
 	background-size: cover;
 	background-position-y: 30%;
 }
@@ -215,12 +215,12 @@ a.morebtn:hover{
 .cate-grid p{
 	color:#fff;
 	font-size:1.3em;
-	font-weight:200;
+	font-weight:500;
 }
 a.store{
-	color:#fff;
+	color:#000;
 	font-size:0.9em;
-	border:3px solid #fff;
+	border:3px solid #000;
 	border-radius:7px;
 	font-weight:500;
 	display:inline-block;
@@ -228,8 +228,8 @@ a.store{
 	margin-top:1.5em;
 }
 a.store:hover{
-	border:2px solid #fcff19;
-	color:#fcff19;
+	border:2px solid #000;
+	color:#000;
 }
 /*--bikes--*/
 .bikes{
@@ -407,7 +407,7 @@ select{
 }
 /*--footer--*/
 .footer{
-	background:#fcff19;
+	background:#08080873;
 	padding:1.5em;
 }
 .logo2{
@@ -430,9 +430,10 @@ select{
 }
 /*--bycycle--*/
 .banner-sec{
-	background:url(../images/bg.jpg) no-repeat;
+	background:url(../images/image.jpg) no-repeat;
 	background-size:cover;
 	min-height:200px;
+	background-position-y: 60%;
 }
 .bikes{
 	padding:4em 0;

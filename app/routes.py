@@ -11,7 +11,7 @@ from pyfcm import FCMNotification
 
 @app_instance.route('/')
 @app_instance.route('/index')       		# these are called decorators
-@login_required
+#@login_required
 def index():		                # this is called a view function
 	posts = [
         {
@@ -23,7 +23,7 @@ def index():		                # this is called a view function
             'body': 'The Avengers movie was so cool!'
         }
     ]
-	return render_template("index.html", title = "Our Home Page", postslist = posts)
+	return render_template("index1.html", title = "Our Home Page", postslist = posts)
 
 
 
