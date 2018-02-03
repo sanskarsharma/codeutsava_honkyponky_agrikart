@@ -214,9 +214,13 @@ def weather():
 
     return res
 
-@app_instance.route("/fertilisers.html")
+@app_instance.route("/fertilisers")
 def fertilisers():
     return render_template("fertilisers.html")
+
+@app_instance.route("/government_schemes")
+def government_schemes():
+    return render_template("govt.html")
 
 
 

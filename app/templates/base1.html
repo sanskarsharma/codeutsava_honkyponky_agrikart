@@ -48,7 +48,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	  <div class="container">
 			 <div class="header">
 			       <div class="logo">
-						 <a href="{{url_for("index")}}"><img src="{{ url_for('static', filename='images/logo.png') }}" alt=""/></a>
+						 <a href="/index"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="" style="width:100px;"/></a>
 				   </div>							 
 				  <div class="top-nav">										 
 						<label class="mobile_menu" for="mobile_menu">
@@ -56,36 +56,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</label>
 						<input id="mobile_menu" type="checkbox">
 					   <ul class="nav">
-						  <li class="dropdown1"><a href="bicycles.html">BICYCLES</a>
-							  <ul class="dropdown2">
-									<li><a href="bicycles.html">FIXED / SINGLE SPEED</a></li>
-									<li><a href="bicycles.html">CITY BIKES</a></li>
-									<li><a href="bicycles.html">PREMIMUN SERIES</a></li>												
-							  </ul>
-						  </li>
-						  <li class="dropdown1"><a href="parts.html">PARTS</a>
-							 <ul class="dropdown2">
-									<li><a href="parts.html">CHAINS</a></li>
-									<li><a href="parts.html">TUBES</a></li>
-									<li><a href="parts.html">TIRES</a></li>
-									<li><a href="parts.html">DISC BREAKS</a></li>
-							  </ul>
-						 </li>      
-						 <li class="dropdown1"><a href="accessories.html">ACCESSORIES</a>
-							 <ul class="dropdown2">
-									<li><a href="accessories.html">LOCKS</a></li>
-										<li><a href="accessories.html">HELMETS</a></li>
-										<li><a href="accessories.html">ARM COVERS</a></li>
-										<li><a href="accessories.html">JERSEYS</a></li>
-							  </ul>
-						 </li>               
-						 <li class="dropdown1"><a href="404.html">EXTRAS</a>
-							 <ul class="dropdown2">
-									<li><a href="404.html">CLASSIC BELL</a></li>
-									<li><a href="404.html">BOTTLE CAGE</a></li>
-									<li><a href="404.html">TRUCK GRIP</a></li>
-							  </ul>
-                         </li>
+                            <li class="dropdown1"><a href="/showproducts">Products</a>
+                                <ul class="dropdown2">
+                                      <li><a href="/products/2">Fertilizers</a></li>
+                                      <li><a href="/products/3">Manure</a></li>
+                                      <li><a href="/products/1">Tools</a></li>												
+                                </ul>
+                            </li>
+                            <li class="dropdown1"><a href="parts.html">Information</a>
+                               <ul class="dropdown2">
+                                      <li><a href="/government_schemes">Goverment Schemes</a></li>
+                                      <li><a href="/fertilisers">Fertilisers</a>
+                                       
+                                      </li>
+                                </ul>
+                           </li> 
+  
+                           <li class="dropdown1"><a href="parts.html">Soil Health</a>
+                               <ul class="dropdown2">
+                                      <li><a href="parts.html">Soil health Info</a></li>
+                                      <li><a href="parts.html">Best time to fertilise plantss/</a>
+                                       
+                                      </li>
+                                </ul>
+                           </li> 
+  
+                           <li><a href="#">Weather Status</a></li>
+                           <li><a href="#">Q/A Forum</a></li>     
+                            
                         {% if current_user.is_anonymous %}
                         <li><a href="#" data-toggle="modal" data-target="#loginForm">LOGIN</a></li>
                         <li><a href="#" data-toggle="modal" data-target="#REGISTERForm">SIGNUP</a></li>
@@ -316,7 +314,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="footer">
     <div class="container wrap">
        <div class="logo2">
-            <a href="{{url_for("index")}}"><img src="{{ url_for('static', filename='images/logo2.png') }}" alt=""/></a>
+            <a href="{{url_for("index")}}"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="" style="width:70px"/></a>
        </div>
        <div class="ftr-menu">
             <ul>

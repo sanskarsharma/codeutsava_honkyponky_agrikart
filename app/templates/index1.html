@@ -137,7 +137,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	  <div class="container">
 			 <div class="header">
 			       <div class="logo">
-						 <a href="index.html"> <!--<img src="static/images/logo.png" alt=""/>--></a>
+						 <a href="/index"> <img src="{{ url_for('static', filename='images/logo.png') }}" alt="" style="width:100px;"/></a>
 				   </div>							 
 				  <div class="top-nav">										 
 						<label class="mobile_menu" for="mobile_menu">
@@ -145,17 +145,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</label>
 						<input id="mobile_menu" type="checkbox">-->
 					   <ul class="nav">
-						  <li class="dropdown1"><a href="bicycles.html">Products</a>
+						  <li class="dropdown1"><a href="/showproducts">Products</a>
 							  <ul class="dropdown2">
-									<li><a href="bicycles.html">Inorganic Fertilizers</a></li>
-									<li><a href="bicycles.html">Organic Fertilizers</a></li>
-									<li><a href="bicycles.html">Tools</a></li>												
+									<li><a href="/products/2">Fertilizers</a></li>
+									<li><a href="/products/3">Manure</a></li>
+									<li><a href="/products/1">Tools</a></li>												
 							  </ul>
 						  </li>
 						  <li class="dropdown1"><a href="parts.html">Information</a>
 							 <ul class="dropdown2">
-									<li><a href="govt.html">Goverment Schemes</a></li>
-									<li><a href="fertilisers.html">Fertilisers</a>
+									<li><a href="/government_schemes">Goverment Schemes</a></li>
+									<li><a href="/fertilisers">Fertilisers</a>
                                      
 									</li>
 							  </ul>
@@ -346,7 +346,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><h1>AGRICULTURE TOOLS</h1></li>	
 						  </ul>
 						  <p style="color:#000000;"> Farming is not just a job, it’s a way of life.</p>
-						  <a class="morebtn" href="bicycles.html">SHOP Agro Products</a>
+						  <a class="morebtn" href="/showproducts">SHOP Agro Products</a>
 					  </div>
 				  </div>
 	 </div>
@@ -359,20 +359,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	 <div class="container">
 		 <h3>CATEGORIES</h3>
 		 <div class="categorie-grids">
-			 <a href="bicycles.html"><div class="col-md-4 cate-grid grid1">
+			 <a href="/products/2"><div class="col-md-4 cate-grid grid1">
 				 <h4>Fertilizers</h4>
 				 <p></p>
-				 <a class="store" href="bicycles.html">GO TO STORE</a>
+				 <a class="store" href="/products/2">GO TO STORE</a>
 			 </div></a>
-			 <a href="bicycles.html"><div class="col-md-4 cate-grid grid2">
+			 <a href="/products/3"><div class="col-md-4 cate-grid grid2">
 				 <h4>Raw Materials</h4>
 				 <p></p>
-				 <a class="store" href="bicycles.html">GO TO STORE</a>
+				 <a class="store" href="/products/3">GO TO STORE</a>
 			 </div></a>
-			 <a href="bicycles.html"><div class="col-md-4 cate-grid grid3">
+			 <a href="/products/1"><div class="col-md-4 cate-grid grid3">
 				 <h4>Tools</h4>
 				 <p></p>
-				 <a class="store" href="bicycles.html">GO TO STORE</a>
+				 <a class="store" href="/products/1">GO TO STORE</a>
 			 </div></a>
 			 <div class="clearfix"></div>
 		 </div>
