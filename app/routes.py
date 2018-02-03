@@ -16,17 +16,19 @@ from pyfcm import FCMNotification
 @app_instance.route('/index')       		# these are called decorators
 #@login_required
 def index():		                # this is called a view function
-	posts = [
-        {
-            'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
-        },
-        {
-            'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
-        }
-    ]
-	return render_template("index1.html", title = "Our Home Page", postslist = posts)
+	# posts = [
+    #     {
+    #         'author': {'username': 'John'},
+    #         'body': 'Beautiful day in Portland!'
+    #     },
+    #     {
+    #         'author': {'username': 'Susan'},
+    #         'body': 'The Avengers movie was so cool!'
+    #     }
+    # ]
+
+    form_obj = LoginForm()
+    return render_template("index1.html", title = "Our Home Page", form = form_obj)
 
 
 
@@ -47,7 +49,7 @@ def login():
         if not next_page or url_parse(next_page).netloc != "":
             next_page = url_for("index")
         return redirect(next_page)
-    return render_template("login.html", title= "Sign In", form = form_obj)
+    return render_template("index1.html", title= "Sign In", form = form_obj)
 
 @app_instance.route("/logout")
 def logout():
@@ -144,13 +146,13 @@ def add_product():
         mrp = request.form.get("mrp")
         offer_price = request.form.get("offer_price")
         cod_eligible =request.form.get("cod_eligible")
-        seller_id =request.form.get("selled_id")
+        seller_id = "admin" #request.form.get("selled_id")
         details =request.form.get("details")
         delivery_cost = request.form.get("delivery_cost")
 
         returnable = request.form.get("returnable")
         availability = request.form.get("availability")
-        rating = request.form.get("rating")
+        rating =   4 # request.form.get("rating")
         imagepath = request.form.get("imagepath")
 
         product_obj = Product(id = id, name=name, category=category, mrp=mrp, offer_price=offer_price, cod_eligible=cod_eligible,
@@ -165,7 +167,7 @@ def add_product():
 @app_instance.route("/showproducts")
 def show_products():
     products = Product.query.all()
-    return render_template("product.html",products=products)
+    return render_template("show_products.html",products=products)
 
 
 @app_instance.route("/products/<category>")
