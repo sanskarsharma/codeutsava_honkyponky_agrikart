@@ -180,4 +180,4 @@ def each_product():
 @app_instance.route("/testing")
 def testing():
     #..
-    return render_template("cart.html")
+    return render_template("soilhealthinfo.html")
