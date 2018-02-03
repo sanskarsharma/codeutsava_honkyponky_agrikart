@@ -1,152 +1,140 @@
-2018-01-25 11:12:32,782 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 11:28:05,511 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 11:28:29,569 ERROR: Exception on /fcm [GET] 
- 		 [in e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py:1560]
-Traceback (most recent call last):
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\_compat.py", line 33, in reraise
-    raise value
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "E:\Python Course\flask\pehlaFlask\app\routes.py", line 130, in send_fcm
-    print(result + str("\n\n done"))
-TypeError: unsupported operand type(s) for +: 'dict' and 'str'
-2018-01-25 11:30:24,842 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 11:34:16,932 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 12:19:58,307 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 12:30:11,071 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 12:31:12,823 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 12:31:24,379 ERROR: Exception on /fcm [GET] 
- 		 [in e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py:1560]
-Traceback (most recent call last):
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\_compat.py", line 33, in reraise
-    raise value
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "E:\Python Course\flask\pehlaFlask\app\routes.py", line 124, in send_fcm
-    result = push_service.notify_single_device(registration_id=registration_id, message_body=message_body, data_message=data_message)
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\pyfcm\fcm.py", line 92, in notify_single_device
-    **extra_kwargs)
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\pyfcm\baseapi.py", line 141, in parse_payload
-    raise InvalidDataError("Provided data_message is in the wrong format")
-pyfcm.errors.InvalidDataError: Provided data_message is in the wrong format
-2018-01-25 12:32:13,620 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 13:09:01,448 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 13:10:55,017 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 13:18:52,968 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 13:20:37,819 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 13:23:41,635 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 13:31:38,887 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 13:32:37,307 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 13:33:14,434 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 13:34:29,635 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 13:43:44,139 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 21:34:27,950 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 21:43:03,999 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 21:45:45,772 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 21:47:20,971 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 21:49:15,663 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 21:50:50,756 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 23:10:54,161 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 23:17:54,526 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-25 23:21:25,558 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-26 00:14:20,384 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-26 02:48:03,571 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-26 03:25:13,140 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-26 03:25:21,029 ERROR: Exception on /fcm [GET] 
- 		 [in e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py:1560]
-Traceback (most recent call last):
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\_compat.py", line 33, in reraise
-    raise value
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "E:\Python Course\flask\pehlaFlask\app\routes.py", line 125, in send_fcm
-    result = push_service.notify_single_device(registration_id=registration_id, message_body=message_body, data_message=data_message)
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\pyfcm\fcm.py", line 92, in notify_single_device
-    **extra_kwargs)
-  File "e:\python course\flask\pehlaflask\pehla_virtualenv\lib\site-packages\pyfcm\baseapi.py", line 141, in parse_payload
-    raise InvalidDataError("Provided data_message is in the wrong format")
-pyfcm.errors.InvalidDataError: Provided data_message is in the wrong format
-2018-01-26 03:26:31,755 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-26 03:40:05,061 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-26 04:21:35,085 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-26 13:33:54,168 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-26 13:37:20,708 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-26 13:40:06,010 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-26 13:43:00,421 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-26 13:45:12,794 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-01-26 13:48:36,069 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-02-02 21:31:33,855 INFO: Microblog startup 
- 		 [in E:\Python Course\flask\pehlaFlask\app\__init__.py:49]
-2018-02-03 03:23:36,167 INFO: Microblog startup 
+2018-02-03 03:57:24,841 INFO: Microblog startup 
  		 [in E:\codeutsavaproj\ecommerce_flask\app\__init__.py:49]
-2018-02-03 03:57:14,623 INFO: Microblog startup 
+2018-02-03 13:09:40,266 INFO: Microblog startup 
  		 [in E:\codeutsavaproj\ecommerce_flask\app\__init__.py:49]
+2018-02-03 13:11:11,698 INFO: Microblog startup 
+ 		 [in E:\codeutsavaproj\ecommerce_flask\app\__init__.py:49]
+2018-02-03 12:25:48,732 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 13:18:55,810 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 13:27:04,704 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 13:28:04,270 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 13:30:38,183 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 13:34:15,386 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 13:35:08,838 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 13:39:38,522 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 13:40:07,794 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 13:42:43,819 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 13:44:54,517 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 13:46:57,476 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 13:48:23,495 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 13:52:40,554 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 13:54:22,354 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 13:55:12,417 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 13:55:37,709 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 13:59:19,047 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 14:00:25,966 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 14:01:31,190 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 14:09:54,959 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 14:11:15,500 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 14:12:45,615 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 14:13:41,032 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 14:15:28,914 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 14:28:14,799 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 15:47:55,425 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 16:24:37,519 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 16:28:07,591 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 16:29:44,642 INFO: Microblog startup 
+ 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
+2018-02-03 17:14:12,724 INFO: Microblog startup 
+ 		 [in E:\codeutsavaproj\ecommerce_flask\app\__init__.py:49]
+2018-02-03 17:17:20,746 INFO: Microblog startup 
+ 		 [in E:\codeutsavaproj\ecommerce_flask\app\__init__.py:49]
+2018-02-03 18:06:37,468 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 18:09:40,816 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 18:10:16,416 ERROR: Exception on /testing [GET] 
+ 		 [in d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\codeutsava2\app\routes.py", line 178, in testing
+    return render_template("products_by_category.html")
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: products_by_category.html
+2018-02-03 18:11:46,018 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 18:11:55,553 ERROR: Exception on /testing [GET] 
+ 		 [in d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\codeutsava2\app\routes.py", line 178, in testing
+    return render_template("cart.html")
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: cart.html

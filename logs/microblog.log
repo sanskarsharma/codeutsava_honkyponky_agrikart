@@ -1,70 +1,58 @@
-2018-02-03 03:57:24,841 INFO: Microblog startup 
- 		 [in E:\codeutsavaproj\ecommerce_flask\app\__init__.py:49]
-2018-02-03 13:09:40,266 INFO: Microblog startup 
- 		 [in E:\codeutsavaproj\ecommerce_flask\app\__init__.py:49]
-2018-02-03 13:11:11,698 INFO: Microblog startup 
- 		 [in E:\codeutsavaproj\ecommerce_flask\app\__init__.py:49]
-2018-02-03 12:25:48,732 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 13:18:55,810 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 13:27:04,704 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 13:28:04,270 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 13:30:38,183 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 13:34:15,386 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 13:35:08,838 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 13:39:38,522 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 13:40:07,794 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 13:42:43,819 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 13:44:54,517 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 13:46:57,476 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 13:48:23,495 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 13:52:40,554 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 13:54:22,354 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 13:55:12,417 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 13:55:37,709 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 13:59:19,047 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 14:00:25,966 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 14:01:31,190 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 14:09:54,959 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 14:11:15,500 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 14:12:45,615 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 14:13:41,032 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 14:15:28,914 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 14:28:14,799 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 15:47:55,425 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 16:24:37,519 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 16:28:07,591 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 16:29:44,642 INFO: Microblog startup 
- 		 [in D:\development_golu\codeutsava\app\__init__.py:49]
-2018-02-03 17:14:12,724 INFO: Microblog startup 
- 		 [in E:\codeutsavaproj\ecommerce_flask\app\__init__.py:49]
-2018-02-03 17:17:20,746 INFO: Microblog startup 
- 		 [in E:\codeutsavaproj\ecommerce_flask\app\__init__.py:49]
+2018-02-03 18:11:57,564 ERROR: Exception on /testing [GET] 
+ 		 [in d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\codeutsava2\app\routes.py", line 178, in testing
+    return render_template("cart.html")
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "d:\codeutsava2\pehla_virtualenv\lib\site-packages\flask\templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: cart.html
+2018-02-03 18:13:58,613 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 18:16:18,126 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 18:30:03,957 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 18:39:40,520 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 18:49:57,815 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 18:57:57,924 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 18:58:49,892 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 19:02:12,988 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 19:07:40,243 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 19:10:42,154 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 19:12:18,847 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 19:14:36,644 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
+2018-02-03 19:15:47,556 INFO: Microblog startup 
+ 		 [in D:\codeutsava2\app\__init__.py:49]
