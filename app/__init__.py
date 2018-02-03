@@ -19,7 +19,7 @@ login_manager_instance.login_view = "login"		# this "login" is the name of our v
 												# we are setting this to use the "require login for certain pages" functionality given by flask_login extention
 from app import routes, models, errors			 	# this "app" means app naam ka package i.e our directory which is named app
 
-if not app_instance.debug:
+#if not app_instance.debug:
 
 		# to be used when using a mail server along with flask server
 		# if app_instance.config['MAIL_SERVER']:

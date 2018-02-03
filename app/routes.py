@@ -14,17 +14,19 @@ from pyfcm import FCMNotification
 @app_instance.route('/index')       		# these are called decorators
 #@login_required
 def index():		                # this is called a view function
-	posts = [
-        {
-            'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
-        },
-        {
-            'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
-        }
-    ]
-	return render_template("index1.html", title = "Our Home Page", postslist = posts)
+	# posts = [
+    #     {
+    #         'author': {'username': 'John'},
+    #         'body': 'Beautiful day in Portland!'
+    #     },
+    #     {
+    #         'author': {'username': 'Susan'},
+    #         'body': 'The Avengers movie was so cool!'
+    #     }
+    # ]
+
+    form_obj = LoginForm()
+    return render_template("index1.html", title = "Our Home Page", form = form_obj)
 
 
 
@@ -45,7 +47,7 @@ def login():
         if not next_page or url_parse(next_page).netloc != "":
             next_page = url_for("index")
         return redirect(next_page)
-    return render_template("login.html", title= "Sign In", form = form_obj)
+    return render_template("index1.html", title= "Sign In", form = form_obj)
 
 @app_instance.route("/logout")
 def logout():
@@ -163,7 +165,7 @@ def add_product():
 @app_instance.route("/showproducts")
 def show_products():
     products = Product.query.all()
-    return render_template("product.html",products=products)
+    return render_template("show_products.html",products=products)
 
 
 @app_instance.route("/products/<category>")

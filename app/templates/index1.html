@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bike Shop a Ecommerce Category Flat Bootstarp Responsive Website Template| Home :: w3layouts</title>
+{% if title %}
+<title>{{ title }} | Agricart</title>
+{% else %}
+<title>Welcome to Agricart</title>
+{% endif %}
 <link href="static/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (Bootstrap's JavaScript plugins) -->
 <script src="static/js/jquery.min.js"></script>
 <script src="static/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.12.0/validate.min.js"></script>
 <!-- Custom Theme files -->
 <link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="static/css/ourstyle.css" rel="stylesheet" type="text/css" media="all" />
@@ -132,7 +137,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	  <div class="container">
 			 <div class="header">
 			       <div class="logo">
-						 <a href="index.html"> <!--<img src="static/images/logo.png" alt=""/>--!></a>
+						 <a href="index.html"> <!--<img src="static/images/logo.png" alt=""/>--></a>
 				   </div>							 
 				  <div class="top-nav">										 
 						<label class="mobile_menu" for="mobile_menu">
@@ -157,8 +162,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						 <li><a href="#">Weather Status</a></li>
                          <li><a href="#">Q/A Forum</a></li>     
 						              
+						 {% if current_user.is_anonymous %}
 						 <li><a href="#" data-toggle="modal" data-target="#loginForm">LOGIN</a></li>
 						 <li><a href="#" data-toggle="modal" data-target="#REGISTERForm">SIGNUP</a></li>
+						 {% else %}
+						 <li><a href="{{ url_for('user_profile', username=current_user.username) }}">Profile</a></li>
+						 <li><a href="{{url_for("logout")}}">Logout</a></li>
+						 {% endif %}
 						 <!-- <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 							Launch demo modal
 						  </button>
@@ -171,15 +181,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	  </div>	
 	  
 
-	  <div id="loginForm" class="login--form modal fade">
+	<div id="loginForm" class="login--form modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
                 <div class="modal-body">
                     <div class="title">
-                        <h2 class="h4">Login</h2> </div>
-                    <form method="post" action="" data-form="validate" id="login_form" novalidate="novalidate">
-                        <div class="form-group">
+						<h2 class="h4">Login</h2> 
+					</div>
+                    <form method="post" action="{{url_for("login")}}" data-form="validate" id="login_form" novalidate="novalidate">
+                        <!-- <div class="form-group">
                             <input type="email" name="username" id="logemail" placeholder="Your Email" class="form-control" required="" autofocus=""> 
                             <div id="logemailerror" style="color:red;"></div>
                         </div>
@@ -187,63 +198,133 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <input type="password" name="password" id="logpassword" placeholder="Password" class="form-control" required=""> 
                             <div id="logpassworderror" style="color:red;"></div>
                         </div>
-                        <input type="hidden" name="systpl">
                         <p class="help-block"><a style="cursor: pointer" onclick="forgetp()">Forgot Your Password?</a></p>
-                        <input type="submit" id="loginbtn" value="LOGIN" class="btn btn-block btn-default">
+						<input type="submit" id="loginbtn" value="LOGIN" class="btn btn-block btn-default"> -->
+						
+						{{ form.hidden_tag() }}
+						<div class="form-group">
+							{{ form.username(size=32, class_="form-control", placeholder="Your username") }}
+							{% for error in form.username.errors %}
+							<span style="color: red;">[{{ error }}]</span>
+							{% endfor %}
+						</div>
+						<div class="form-group">
+							{{ form.password(size=32, class_="form-control", placeholder="Your password") }}
+							{% for error in form.password.errors %}
+							<span style="color: red;"> [{{ error }}] </span>
+							{% endfor %}
+						</div>
+						{{ form.remember_me() }} {{ form.remember_me.label }}
+						{{ form.submit() }}
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
+<script>
+	$(document).ready(function() {
+		$("#loginForm").validate({
+			elementClass: div,
+			rules : 
+			{
+				username:
+				{
+					required:true,
+				},
+				password:
+				{
+					required:true,
+				}
+			},
+			display :
+			{
+				username:
+				{
+					required: "Please enter username.",
+				},
+				password:
+				{
+					required: "Please enter password.",
+				},
+			},
+  			submitHandler: function(form) {
+    			$(form).submit();
+  			}
+ 		});
+	});
 
-	<div id="REGISTERForm" class="login--form modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
-                <div class="modal-body">
-                    <div class="title">
-                        <h2 class="h4">REGISTRATION</h2> </div>
-                    <form action="#" data-form="validate" id="reg_without_verify" novalidate="novalidate">
-                       <div class="form-group">
-      <!-- <label for="email">Name:</label> -->
-      <input type="name" class="form-control" id="regname1" placeholder="Enter name" name="name" autofocus="">
-      <div id="regnameerror1" style="color:red;"></div>
-    </div>
-    <div class="form-group">
-      <!-- <label for="email">Contact No:</label> -->
-      <input type="phone" class="form-control" id="regphone1" placeholder="Enter Mobile No" name="phone" minlength="10" maxlength="10">
-      <div id="regmobileerror1" style="color:red;"></div>
-    </div>
-    <div class="form-group">
-      <!-- <label for="email">Address:</label> -->
-      <input type="address" class="form-control" id="regaddress1" placeholder="Enter Address" name="address">
-    </div>
-    <div class="form-group">
-      <!-- <label for="email">Email:</label> -->
-      <input type="email" class="form-control" id="regemail1" placeholder="Enter email" name="email">
-      <div id="regemailerror1" style="color:red;"></div>
-    </div>
-    <div class="form-group">
-      <!-- <label for="pwd">Password:</label> -->
-      <input type="password" class="form-control" id="regpwd1" placeholder="Enter password" name="pwd">
-      <div id="regpassworderror1" style="color:red;"></div>
-    </div>
+</script>
 
-    <h4 id="serverError" style="color:red; display: none;"></h4>
 
-                        <input type="hidden" name="systpl" value="">
-                       <input type="submit" class="btn btn-block btn-default text-uppercase" value="Register">
-		 
+
+
+        
+<div id="REGISTERForm" class="login--form modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+				<div class="modal-body">
+					<div class="title">
+						<h2 class="h4">REGISTRATION</h2> 
+					</div>
+					<form action="/register" data-form="validate" id="reg_without_verify" novalidate="novalidate">
+						
+						<div class="form-group">
+							<!-- <label for="email">Name:</label> -->
+							<input type="text" class="form-control" id="regname1" placeholder="Enter name" name="username" autofocus="">
+							<div id="regnameerror1" style="color:red;"></div>
+						</div>
+						<div class="form-group">
+							<!-- <label for="email">Email:</label> -->
+							<input type="email" class="form-control" id="regemail1" placeholder="Enter email" name="email">
+							<div id="regemailerror1" style="color:red;"></div>
+						</div>
+						<div class="form-group">
+							<!-- <label for="pwd">Password:</label> -->
+							<input type="password" class="form-control" id="regpwd1" placeholder="Enter password" name="password_hash">
+							<div id="regpassworderror1" style="color:red;"></div>
+						</div>
+						<div class="form-group">
+							<!-- <label for="email">Contact No:</label> -->
+							<input type="text" class="form-control" id="regphone1" placeholder="Enter Mobile No" name="state" minlength="10" maxlength="10">
+							<div id="regmobileerror1" style="color:red;"></div>
+						</div>
+						<div class="form-group">
+							<!-- <label for="email">Contact No:</label> -->
+							<input type="text" class="form-control" id="regphone1" placeholder="Enter Mobile No" name="district">
+							<div id="regmobileerror1" style="color:red;"></div>
+						</div>
+						<div class="form-group">
+							<!-- <label for="email">Contact No:</label> -->
+							<input type="text" class="form-control" id="regphone1" placeholder="Enter Mobile No" name="city">
+							<div id="regmobileerror1" style="color:red;"></div>
+						</div>
+						<div class="form-group">
+							<!-- <label for="email">Contact No:</label> -->
+							<input type="text" class="form-control" id="regphone1" placeholder="Enter Mobile No" name="address">
+							<div id="regmobileerror1" style="color:red;"></div>
+						</div>
+						<div class="form-group">
+							<!-- <label for="email">Contact No:</label> -->
+							<input type="text" class="form-control" id="regphone1" placeholder="Enter Mobile No" name="kisan_id">
+							<div id="regmobileerror1" style="color:red;"></div>
+						</div>
+					
+						<h4 id="serverError" style="color:red; display: none;"></h4>
+			
+						<input type="submit" class="btn btn-block btn-default text-uppercase" value="Register">
+					 
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 				</div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+	
 
 
-
+				
 	  
 	 <div class="caption">
 		 <div class="slider">
@@ -490,7 +571,7 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
         <form action="form.php" class="contact-form" method="post">
 
             <div class="form-group">
-              <input type="text" class="form-control" id="name" name="nm" placeholder="Name" required="" autofocus="">
+              <input type="text" class="form-control" id="name" name="nm" placeholder="Name" required="">
             </div>
 
 
