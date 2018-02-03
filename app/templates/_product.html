@@ -1,11 +1,12 @@
 <div class="col-md-3">
     <a href="single.html">
         <div class="part-sec">					 
-            <img src="images/p1.jpg" alt=""/>
+            <img src="{{product.imagepath}}" alt=""/>
             <div class="part-info">
-                <a href="#"><h5>Wire Locks<span>$7.00</span></h5></a>
-                <a class="add-cart" href="single.html">Quick View</a>
-                <a class="qck" href="single.html">BUY NOW</a>
+                <a href="#"><h5>{{product.name}}<span>Rs.{{product.offer_price}}</span>
+                    <span>Rs. {{product.mrp}}</span></h5></a>
+                <a class="add-cart" href="/products/{{product.category}}/{{product.id}}">Quick View</a>
+                <a class="qck" href="/products/{{product.category}}/{{product.id}}">BUY NOW</a>
             </div>
         </div>
     </a>

@@ -1,0 +1,19 @@
+{% extends "base1.html" %}
+
+
+{% block content %}
+
+<div class="container" style="margin-top:20px; margin-bottom:20px;">
+<h2>{% if products[0].category=='1' %}
+        Tools
+    {% elif products[0].category=='2' %}
+        Fertilizers
+    {% elif products[0].category=='3' %}
+        Manure
+    {% endif %}</h2>
+{% for product in products %}
+{% include "_product.html" %}
+{% endfor %}
+</div>
+
+{% endblock %}

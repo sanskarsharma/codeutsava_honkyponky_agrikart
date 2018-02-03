@@ -3,9 +3,11 @@
 
 {% block content %}
 
-
+<div class="container" style="margin-top:20px; margin-bottom:20px;">
+<h2>ALL PRODUCTS</h2>
 {% for product in products %}
 {% include "_product.html" %}
 {% endfor %}
+</div>
 
 {% endblock %}
