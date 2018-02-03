@@ -52,7 +52,7 @@ def load_user(id):
     return User.query.get(int (id))
 
 class Product(db_instance.Model):
-    id = db_instance.Column(db_instance.Integer, primary_key=True)
+    id = db_instance.Column(db_instance.Integer, primary_key=True, autoincrement=True)
     name = db_instance.Column(db_instance.String)
     category = db_instance.Column(db_instance.String)
     mrp = db_instance.Column(db_instance.Integer)
@@ -65,6 +65,9 @@ class Product(db_instance.Model):
     availability = db_instance.Column(db_instance.Integer) # num of units 
     rating = db_instance.Column(db_instance.Integer)
     imagepath = db_instance.Column(db_instance.String)
+
+    def __repr__(self):                             # this method tells Python how to print objects of this class, which is going to be useful for debugging. 
+        return "<Product {} , {},  {}>".format(self.id,self.name, self.mrp)
 
 
 

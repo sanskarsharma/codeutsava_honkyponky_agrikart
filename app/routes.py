@@ -2,7 +2,7 @@ from app import app_instance, db_instance
 from flask import render_template, flash, redirect, url_for, request
 from app.forms import LoginForm, RegistrationForm, EditProfileForm
 from flask_login import current_user, login_user, logout_user, login_required
-from app.models import User
+from app.models import *
 from werkzeug.urls import url_parse
 from datetime import datetime
 import time
@@ -130,4 +130,51 @@ def send_fcm():
     print("\n\n")
 
     return render_template("index.html")
+
+@app_instance.route("/addproduct",methods=["GET","POST"])
+def add_product():
+    if request.method=="POST":
+        id = request.form.get("id")
+
+        name = request.form.get("name")
+        category = request.form.get("category")
+        mrp = request.form.get("mrp")
+        offer_price = request.form.get("offer_price")
+        cod_eligible =request.form.get("cod_eligible")
+        seller_id =request.form.get("selled_id")
+        details =request.form.get("details")
+        delivery_cost = request.form.get("delivery_cost")
+
+        returnable = request.form.get("returnable")
+        availability = request.form.get("availability") 
+        rating = request.form.get("rating")
+        imagepath = request.form.get("imagepath")
+
+        product_obj = Product(id = id, name=name, category=category, mrp=mrp, offer_price=offer_price, cod_eligible=cod_eligible,
+        seller_id=seller_id,details=details,delivery_cost=delivery_cost,returnable=returnable,availability=availability,rating=rating,imagepath=imagepath)
+
+        db_instance.session.add(product_obj)
+        db_instance.session.commit()
+        flash("Your Product has been added")
+        return redirect(url_for("show_products"))
+    return render_template("add_product.html")
+
+@app_instance.route("/showproducts")
+def show_products():
+    products = Product.query.all()
+    return render_template("show_product.html",products=products)
+
+
+@app_instance.route("/products/<category>")
+def products_by_category():
+    products = Product.query.filter_by(category=category)
+    return render_template("products_by_category.html", products=products)
+
+
+
+
+
+
+
+
 
