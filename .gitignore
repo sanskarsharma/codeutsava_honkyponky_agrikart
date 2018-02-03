@@ -1,3 +1,6 @@
 pehla_virtualenv 
 virtenv 
 pehla_virtualenv/
+__pycache__ 
+.vscode 
+app/__pycache__ 

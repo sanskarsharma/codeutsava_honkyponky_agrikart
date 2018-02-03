@@ -162,7 +162,7 @@ def add_product():
 @app_instance.route("/showproducts")
 def show_products():
     products = Product.query.all()
-    return render_template("show_product.html",products=products)
+    return render_template("product.html",products=products)
 
 
 @app_instance.route("/products/<category>")
