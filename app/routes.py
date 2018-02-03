@@ -9,6 +9,7 @@ import time
 from app.static import *
 from weather import Weather
 import json
+import requests
 
 from pyfcm import FCMNotification
 
@@ -188,8 +189,17 @@ def testing():
 
 @app_instance.route("/weather")
 def weather():
+    # ip = request.environ.get('HTTP_X_REAL_IP', request.remote_addr)
+    # print(ip)
+    # r = requests.get(url = "http://freegeoip.net/json/"+ str(ip))
+    # json_data = r.json()    # suprise its a dict
+    # print(json_data["city"])
+
+    area =  "raipur" #json_data["city"].lower()   # dictuu["city"] 
+    # because ip is 127.0.0.1 for localhost always, which is not valid
+
     we = Weather()
-    loc = we.lookup_by_location("raipur")
+    loc = we.lookup_by_location(area)
     forecasts = loc.forecast()
     dict = {}
     for f in forecasts:
@@ -202,4 +212,6 @@ def weather():
     res = json.dumps(dict)
 
     return res
+
+
 
