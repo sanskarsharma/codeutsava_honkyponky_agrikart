@@ -193,13 +193,17 @@ a.morebtn:hover{
 	width:31%;
 }
 .grid1{
-	background:url(../images/c1.jpg) no-repeat;
+	background:url(../images/images1.jpg) no-repeat;
+	background-size: cover;
 }
 .grid2{
-	background:url(../images/c2.jpg) no-repeat;
+	background:url(../images/images3.jpg) no-repeat;
+	background-size: cover;
 }
 .grid3{
-	background:url(../images/c3.jpg) no-repeat;
+	background:url(../images/images5.jpg) no-repeat;
+	background-size: cover;
+	background-position-y: 30%;
 }
 .cate-grid h4{
 	color:#fcff19;
