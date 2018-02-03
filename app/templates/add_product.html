@@ -1,0 +1,124 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+</head>
+<body>
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend> Product Details </legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="name">Product Name</label>  
+  <div class="col-md-8">
+  <input id="name" name="name" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="category">Category</label>
+  <div class="col-md-8">
+    <select id="category" name="category" class="form-control">
+      <option value="1">tools</option>
+      <option value="2">fertilizers</option>
+      <option value="3">manure</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="mrp">Price</label>  
+  <div class="col-md-8">
+  <input id="mrp" name="mrp" type="text" placeholder="$" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="offer_price">Offer Price</label>  
+  <div class="col-md-8">
+  <input id="offer_price" name="offer_price" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="cod_eligible">COD Availability</label>
+  <div class="col-md-8"> 
+    <label class="radio-inline" for="cod_eligible-0">
+      <input type="radio" name="cod_eligible" id="cod_eligible-0" value="True" checked="checked">
+      Yes
+    </label> 
+    <label class="radio-inline" for="cod_eligible-1">
+      <input type="radio" name="cod_eligible" id="cod_eligible-1" value="False">
+      No
+    </label>
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="details">Product Details</label>
+  <div class="col-md-8">                     
+    <textarea class="form-control" id="details" name="details"></textarea>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="delivery_cost">Estimated Delivery Cost</label>  
+  <div class="col-md-8">
+  <input id="delivery_cost" name="delivery_cost" type="text" placeholder="$" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="availability">Current stock</label>  
+  <div class="col-md-8">
+  <input id="availability" name="availability" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="returnable">Return </label>
+  <div class="col-md-8"> 
+    <label class="radio-inline" for="returnable-0">
+      <input type="radio" name="returnable" id="returnable-0" value="True" checked="checked">
+      Yes
+    </label> 
+    <label class="radio-inline" for="returnable-1">
+      <input type="radio" name="returnable" id="returnable-1" value="False">
+      No
+    </label>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="imagepath">Image Path</label>  
+  <div class="col-md-8">
+  <input id="imagepath" name="imagepath" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+</fieldset>
+</form>
+</body>
+</html>
