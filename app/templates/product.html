@@ -7,7 +7,7 @@
 
 
 <div class="product">
-	 <div class="container">
+	 <div class="container" style="margin-top:25px; margin-bottom:25px;">
 		 <div class="ctnt-bar cntnt">
 			 <div class="content-bar">
 				 <div class="single-page">
@@ -15,8 +15,8 @@
 						<a href="{{url_for("index")}}">Home</a> <span>::</span>	
 						</div>
 					 <!--Include the Etalage files-->
-						<link rel="stylesheet" href="static/css/etalage.css">
-						<script src="static/js/jquery.etalage.min.js"></script>
+						<link rel="stylesheet" href="{{ url_for('static', filename='css/etalage.css') }}">
+						<script src="{{ url_for('static', filename='js/jquery.etalage.min.js') }}"></script>
 				<script>
 			jQuery(document).ready(function($){
 
@@ -38,12 +38,12 @@
 						 <div class="grid images_3_of_2">
 						  <ul id="etalage">
 							<li>
-								<a href="optionallink.html">
-									<img class="etalage_thumb_image" src="static/images/m1.jpg" class="img-responsive" />
-									<img class="etalage_source_image" src="static/images/m1.jpg" class="img-responsive" title="" />
-								</a>
+								<!-- <a href="optionallink.html"> -->
+									<img class="etalage_thumb_image" src="{{product.imagepath}}" class="img-responsive" />
+									<img class="etalage_source_image" src="{{product.imagepath}}" class="img-responsive" title="" />
+								<!-- </a> -->
 							</li>
-							<li>
+							<!-- <li>
 								<img class="etalage_thumb_image" src="static/images/m2.jpg" class="img-responsive" />
 								<img class="etalage_source_image" src="static/images/m2.jpg" class="img-responsive" title="" />
 							</li>
@@ -54,38 +54,48 @@
 						    <li>
 								<img class="etalage_thumb_image" src="static/images/m4.jpg" class="img-responsive"  />
 								<img class="etalage_source_image" src="static/images/m4.jpg"class="img-responsive"  />
-							</li>
+							</li> -->
 						</ul>
 						</div>
 					 </div>
 					 <div class="details-left-info">
-							<h3>SCOTT SPARK</h3>
-								<h4>Model No: 3498</h4>
-							<h4></h4>
-							<p><label>$</label> 300 <a href="#">Click for offer</a></p>
-							<p class="size">SIZE ::</p>
-							<a class="length" href="#">XS</a>
-							<a class="length" href="#">M</a>
-							<a class="length" href="#">S</a>
+							<h3>{{product.name}}</h3>
+							<h4>Product ID: {{product.id}}</h4>
+							<p><label>Offer Price: Rs. </label> {{product.offer_price}}</p>
+							<p>MRP Price: Rs. {{product.mrp}}</p>
 							<div class="btn_form">
 								<a href="cart.html">buy now</a>
 								<a href="cart.html">ADD TO CART</a>
 							</div>
 							<div class="bike-type">
-							<p>TYPE  ::<a href="#">MOUNTAIN BIKE</a></p>
-							<p>BRAND  ::<a href="#">SPORTS SCOTTY</a></p>
+							<p>Category  ::<a href="/products/{{product.category}}">
+								{% if product.category=='1' %}
+									Tools
+								{% elif product.category=='2' %}
+									Fertilizers
+								{% elif product.category=='3' %}
+									Manure
+								{% endif %}
+							</a></p>
+							<p>Cash on Delivery  ::{{product.cod_eligible}}</p>
+							<p>Delivery Cost  ::{{product.delivery_cost}}</p>
+							<p>Returnable  ::{{product.returnable}}</p>
+							<p>Availabilty  ::{{product.availability}}</p>
+							<p>Rating  ::{{product.rating}}</p>
 							</div>
 							<h5>Description  ::</h5>
-							<p class="desc">The first mechanically-propelled, two-wheeled vehicle may have been built by Kirkpatrick MacMillan, a Scottish blacksmith, in 1839, although the claim is often disputed. He is also associated with the first recorded instance of a cycling traffic offense, when a Glasgow newspaper in 1842 reported an accident in which an anonymous "gentleman from Dumfries-shire... bestride a velocipede... of ingenious design" knocked over a little girl in Glasgow and was fined five
-							The word bicycle first appeared in English print in The Daily News in 1868, to describe "Bysicles and trysicles" on the "Champs Elysées and Bois de Boulogne.</p>
+							<p class="desc">{{product.details}}.</p>
 					 </div>
 					 <div class="clearfix"></div>				 	
 				  </div>
 			  </div>
 		  </div>
-		  <div class="single-bottom2">
+		  <div class="single-bottom2" style="margin-top:25px; margin-bottom:25px;">
 			  <h6>Related Products</h6>
-			 <div class="product">
+			  	{% for product in related_products %}
+				{% include "_product.html" %}
+				{% endfor %}
+			 <!-- <div class="product">
 					 <div class="product-desc">
 						  <div class="product-img product-img2">
 							 <img src="static/images/s1.jpg" class="img-responsive " alt=""/>
@@ -135,7 +145,7 @@
 							<a class="button1" href="cart.html"><span>Add to cart</span></a>
 					 </div>
 				 <div class="clearfix"></div>
-			  </div>
+			  </div> -->
 		 </div>	
 	 </div>
 </div>
