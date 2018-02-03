@@ -7,6 +7,8 @@ from werkzeug.urls import url_parse
 from datetime import datetime
 import time
 from app.static import *
+from weather import Weather
+import json
 
 from pyfcm import FCMNotification
 
@@ -181,3 +183,21 @@ def each_product():
 def testing():
     #..
     return render_template("cart.html")
+
+@app_instance.route("/weather")
+def weather():
+    we = Weather()
+    loc = we.lookup_by_location("raipur")
+    forecasts = loc.forecast()
+    dict = {}
+    for f in forecasts:
+        dict_in = {}
+        dict_in["condition"] = f.text()
+        dict_in["high"] = (int(f.high()) - 32) * 5.0/9.0
+        dict_in["low"] = (int(f.low()) - 32) * 5.0/9.0
+        dict[str(f.date())]= dict_in
+    
+    res = json.dumps(dict)
+
+    return res
+
