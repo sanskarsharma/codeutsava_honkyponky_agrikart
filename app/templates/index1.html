@@ -146,8 +146,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					   <ul class="nav">
 						  <li class="dropdown1"><a href="/showproducts">Products</a>
 							  <ul class="dropdown2">
-									<li><a href="/products/2">Inorganic Fertilizers</a></li>
-									<li><a href="/products/3">Organic Fertilizers</a></li>
+									<li><a href="/products/2">Fertilizers</a></li>
+									<li><a href="/products/3">Manure</a></li>
 									<li><a href="/products/1">Tools</a></li>												
 							  </ul>
 						  </li>
@@ -194,19 +194,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="modal-body">
                     <div class="title">
                         <h2 class="h4">Login</h2> </div>
-                    <form method="post" action="" data-form="validate" id="login_form" novalidate="novalidate">
-                        <div class="form-group">
-                            <input type="email" name="username" id="logemail" placeholder="Your Email" class="form-control" required="" autofocus=""> 
-                            <div id="logemailerror" style="color:red;"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" name="password" id="logpassword" placeholder="Password" class="form-control" required=""> 
-                            <div id="logpassworderror" style="color:red;"></div>
-                        </div>
-                        <input type="hidden" name="systpl">
-                        <p class="help-block"><a style="cursor: pointer" onclick="forgetp()">Forgot Your Password?</a></p>
-                        <input type="submit" id="loginbtn" value="LOGIN" class="btn btn-block btn-default">
-                    </form>
+						<form method="post" action="{{url_for("login")}}" data-form="validate" id="login_form" novalidate="novalidate">
+							<!-- <div class="form-group">
+								<input type="email" name="username" id="logemail" placeholder="Your Email" class="form-control" required="" autofocus=""> 
+								<div id="logemailerror" style="color:red;"></div>
+							</div>
+							<div class="form-group">
+								<input type="password" name="password" id="logpassword" placeholder="Password" class="form-control" required=""> 
+								<div id="logpassworderror" style="color:red;"></div>
+							</div>
+							<p class="help-block"><a style="cursor: pointer" onclick="forgetp()">Forgot Your Password?</a></p>
+							<input type="submit" id="loginbtn" value="LOGIN" class="btn btn-block btn-default"> -->
+							
+							{{ form.hidden_tag() }}
+							<div class="form-group">
+								{{ form.username(size=32, class_="form-control", placeholder="Your username") }}
+								{% for error in form.username.errors %}
+								<span style="color: red;">[{{ error }}]</span>
+								{% endfor %}
+							</div>
+							<div class="form-group">
+								{{ form.password(size=32, class_="form-control", placeholder="Your password") }}
+								{% for error in form.password.errors %}
+								<span style="color: red;"> [{{ error }}] </span>
+								{% endfor %}
+							</div>
+							{{ form.remember_me() }} {{ form.remember_me.label }}
+							{{ form.submit() }}
+						</form>
                 </div>
             </div>
         </div>
@@ -299,20 +314,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	 <div class="container">
 		 <h3>CATEGORIES</h3>
 		 <div class="categorie-grids">
-			 <a href="bicycles.html"><div class="col-md-4 cate-grid grid1">
+			 <a href="/products/2"><div class="col-md-4 cate-grid grid1">
 				 <h4>Fertilizers</h4>
 				 <p></p>
-				 <a class="store" href="bicycles.html">GO TO STORE</a>
+				 <a class="store" href="/products/2">GO TO STORE</a>
 			 </div></a>
-			 <a href="bicycles.html"><div class="col-md-4 cate-grid grid2">
+			 <a href="/products/3"><div class="col-md-4 cate-grid grid2">
 				 <h4>Raw Materials</h4>
 				 <p></p>
-				 <a class="store" href="bicycles.html">GO TO STORE</a>
+				 <a class="store" href="/products/3">GO TO STORE</a>
 			 </div></a>
-			 <a href="bicycles.html"><div class="col-md-4 cate-grid grid3">
+			 <a href="/products/1"><div class="col-md-4 cate-grid grid3">
 				 <h4>Tools</h4>
 				 <p></p>
-				 <a class="store" href="bicycles.html">GO TO STORE</a>
+				 <a class="store" href="/products/1">GO TO STORE</a>
 			 </div></a>
 			 <div class="clearfix"></div>
 		 </div>
