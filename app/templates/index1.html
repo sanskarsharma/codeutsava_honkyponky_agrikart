@@ -176,7 +176,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						 <li><a href="#" data-toggle="modal" data-target="#loginForm">LOGIN</a></li>
 						 <li><a href="#" data-toggle="modal" data-target="#REGISTERForm">SIGNUP</a></li>
 						 {% else %}
-						 <li><a href="{{ url_for('user_profile', username=current_user.username) }}">Profile</a></li>
+						 <!-- <li><a href="{{ url_for('user_profile', username=current_user.username) }}">Profile</a></li> -->
 						 <li><a href={{url_for("logout")}}>Logout</a></li>
 						 {% endif %}
 						  <a class="shop" href="/cart"><img src="static/images/cart.png" alt=""/></a>
@@ -286,7 +286,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><h1>AGRICULTURE TOOLS</h1></li>	
 						  </ul>
 						  <p style="color:#000000;"> Farming is not just a job, it’s a way of life.</p>
-						  <a class="morebtn" href="bicycles.html">SHOP Agro Products</a>
+						  <a class="morebtn" href="/showproducts">SHOP Agro Products</a>
 					  </div>
 				  </div>
 	 </div>
