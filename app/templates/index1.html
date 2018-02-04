@@ -468,19 +468,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script>
 function myMap() {
 var mapProp= {
-    center:new google.maps.LatLng(21.265602,81.660922),
+    center:new google.maps.LatLng(21.229936,81.652964),
     zoom:14,
 };
 var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
  var marker = new google.maps.Marker({
-               position: new google.maps.LatLng(21.265602,81.660922),
+               position: new google.maps.LatLng(21.229936,81.652964),
                map: map,
                animation:google.maps.Animation.Drop
             });
 
   var infowindow = new google.maps.InfoWindow({
-               content:"Beside Sankalp School, Kapa, Mowa, Raipur, Chhattisgarh, India"
+               content:"C-180, Near Rattan Palace, Shailendra Nagar, Raipur, Chhattisgarh, India"
             });
 
         google.maps.event.addListener(marker, 'click', function() {
@@ -498,7 +498,7 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
 
       <div class="col-md-6">
-        <form action="form.php" class="contact-form" method="post">
+        <form action="/contactus" class="contact-form" method="post">
 
             <div class="form-group">
               <input type="text" class="form-control" id="name" name="nm" placeholder="Name" required="" autofocus="">
@@ -510,7 +510,7 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
             </div>
 
           <div class="form-group">
-               <input type="text" class="form-control" id="phone" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" placeholder="Mobile No." required="">
+               <input type="text" class="form-control" id="phone" name="mb" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" placeholder="Mobile No." required="">
           </div>
           <div class="form-group">
           <textarea class="form-control textarea-contact" rows="5" id="comment" name="FB" placeholder="Type Your Message/Feedback here..." required=""></textarea>
@@ -533,10 +533,10 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
           <div class="info">
             <h3 class="title">MAIL & WEBSITE</h3>
             <p>
-              <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp batra.astha27@gmail.com
+              <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp nacof.ltd@gmail.com
               <br>
               <br>
-              <i class="fa fa-globe" aria-hidden="true"></i> &nbsp www.projectname.com
+              <i class="fa fa-globe" aria-hidden="true"></i> &nbsp www.nacof-india.com
             </p>
 
           </div>
@@ -552,10 +552,8 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
           <div class="info">
             <h3 class="title">CONTACT</h3>
               <p>
-              <i class="fa fa-mobile" aria-hidden="true"></i> &nbsp (+91)-74772-32049
+              <i class="fa fa-mobile" aria-hidden="true"></i> &nbsp 0771-4070142
               <br>
-              <br>
-              <i class="fa fa-mobile" aria-hidden="true"></i> &nbsp  (+91)-73896-67085
             </p>
 
           </div>
@@ -571,7 +569,7 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
           <div class="info">
             <h3 class="title">ADDRESS</h3>
               <p>
-               <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp Beside Sankalp Vidya Mandir,<br>Panchwati Nagar,Mowa,Kapa,<br>Raipur-492001
+               <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp C-180 <br>, Near Rattan Palace, Shailendra Nagar,<br>Raipur-492001
             </p>
           </div>
         </div>
