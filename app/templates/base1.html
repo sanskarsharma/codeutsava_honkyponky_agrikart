@@ -10,7 +10,7 @@
 <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
 <!-- jQuery (Bootstrap's JavaScript plugins) -->
 <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-<script src="{{ url_for('static', filename='js/bootstrap.min.j') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 <!-- Custom Theme files -->
 <link href="{{ url_for('static', filename='css/form.css') }}" rel="stylesheet" type="text/css" media="all" />
 <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
@@ -91,7 +91,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="{{ url_for('user_profile', username=current_user.username) }}">Profile</a></li>
                         <li><a href={{url_for("logout")}}>Logout</a></li>
                         {% endif %}
-						  <a class="shop" href="cart.html"><img src="{{ url_for('static', filename='images/cart.png') }}" alt=""/></a>
+						  <a class="shop" href="/cart"><img src="{{ url_for('static', filename='images/cart.png') }}" alt=""/></a>
 					  </ul>
 				 </div>
 				 <div class="clearfix"></div>

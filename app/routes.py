@@ -201,7 +201,7 @@ def weather():
     # because ip is 127.0.0.1 for localhost always, which is not valid
 
  
-    from app.classes import Outer,Inner
+    from app.classes import Inner
 
     we = Weather()
     loc = we.lookup_by_location(area)
@@ -251,18 +251,33 @@ def market_analysis():
     #print(type(n))
     list = []
 
+    c=0
+    out ='['
     for m, n in need.items():
-        obj = Prices()
-        obj.date =  m
-        obj.open = n["1. open"]
-        obj.high = n["2. high"]
-        obj.low = n["3. low"]
-        obj.close = n["4. close"]
-        list.append(obj)
+        c = c+1
 
+        # obj = Prices()
+        # obj.date =  m
+        # obj.open = n["1. open"]
+        # obj.high = n["2. high"]
+        # obj.low = n["3. low"]
+        # obj.close = n["4. close"]
+        list.append(m)
         
-    return render_template("market_analysis.html", list = list)
-    
+        if(c==10):
+            break
+    s = "[" +str(list) +"]"
+        
+    return str(s) #render_template("market_analysis.html", list = list)
+
+@app_instance.route("/market")
+def market():
+    return render_template("market_analysis.html")
+
+
+@app_instance.route("/cart")
+def cart():
+    return render_template("cart.html")
 # dict_in = {}
 #         dict_in["condition"] = 
 #         dict_in["high"] = (int(f.high()) - 32) * 5.0/9.0

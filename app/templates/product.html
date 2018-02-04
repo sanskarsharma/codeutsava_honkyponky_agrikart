@@ -34,16 +34,18 @@
 			});
 		</script>
 						<!--//details-product-slider-->
+						<div class="col-md-6">
 					 <div class="details-left-slider">
-						 <div class="grid images_3_of_2">
+							<img src="{{product.imagepath}}" class="img-responsive" />
+						 <!-- <div class="grid images_3_of_2">
 						  <ul id="etalage">
 							<li>
-								<!-- <a href="optionallink.html"> -->
+								<a href="optionallink.html">
 									<img class="etalage_thumb_image" src="{{product.imagepath}}" class="img-responsive" />
 									<img class="etalage_source_image" src="{{product.imagepath}}" class="img-responsive" title="" />
-								<!-- </a> -->
+								</a>
 							</li>
-							<!-- <li>
+							<li>
 								<img class="etalage_thumb_image" src="static/images/m2.jpg" class="img-responsive" />
 								<img class="etalage_source_image" src="static/images/m2.jpg" class="img-responsive" title="" />
 							</li>
@@ -54,10 +56,11 @@
 						    <li>
 								<img class="etalage_thumb_image" src="static/images/m4.jpg" class="img-responsive"  />
 								<img class="etalage_source_image" src="static/images/m4.jpg"class="img-responsive"  />
-							</li> -->
+							</li>
 						</ul>
-						</div>
-					 </div>
+						</div> -->
+					 </div></div>
+					 <div class="col-md-6">
 					 <div class="details-left-info">
 							<h3>{{product.name}}</h3>
 							<h4>Product ID: {{product.id}}</h4>
@@ -85,7 +88,7 @@
 							</div>
 							<h5>Description  ::</h5>
 							<p class="desc">{{product.details}}.</p>
-					 </div>
+					 </div></div>
 					 <div class="clearfix"></div>				 	
 				  </div>
 			  </div>
