@@ -1,21 +1,31 @@
-<html>
+{% extends "base1.html" %}
+
+
+
+{% block content %}
+
+<!--<html>
 <head>
 <title>Agro site</title>
 <link href="static/css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- jQuery (Bootstrap's JavaScript plugins) -->
+<!-- jQuery (Bootstrap's JavaScript plugins) 
 <script src="static/js/jquery.min.js"></script>
 <script src="static/js/bootstrap.min.js"></script>
-<!-- Custom Theme files -->
+<!-- Custom Theme files 
 <link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="static/css/ourstyle.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body>-->
+	<div class="container" style="margin-top: 30px; margin-bottom:30px;">
 	<h3 align="center" style="color:#A8DA0C;">  Best time for fertilisation </h3>
+	<br>
 <p>
 	Fertilizers contain the building blocks for foliar and fruit production, bloom formation and root and general plant health. In poor soils, the treatment is essential for good plant vigor.
 	The application of fertilizer may be from a soil drench, time release granular formula, stakes, or foliar spray. Whichever method works best for you, the time of year for fertilizing is a crucial bit of information. Each plant is slightly different, but there is one overall rule for most plants.
 </p>
+<br>
+<br>
 <p>
 The umbrella rule for annual application of fertilizer is to apply in early spring. This encourages leafy growth and the production of flowers and then fruit. In some zones, early spring may still contain the surprise of a late freeze or even snow, which can harm the new growth forced by fertilizing. 
 
@@ -24,7 +34,7 @@ In these regions, it is best to wait until the date of your last frost to preven
 <br> 
 
 <h3 align="center" style="color:#A8DA0C;"> How to apply Fertilizer </h3>
-
+<br>
 <p>
 	It is estimated that 3 pounds of nitrogen per 1,000 square feet is adequate for good growth on woody plants. That number may be adjusted to half that rate for some ornamental plants. Perennials benefit from only 1 pound of nitrogen per 1,000 feet.
 	
@@ -34,5 +44,7 @@ In these regions, it is best to wait until the date of your last frost to preven
 	 	Over fertilizing can be as bad as no fertilizing and a soil test can point out what, if any, is needed for a bountiful harvest and vigorous plant growth. 
 
 </p>
-</body>
+</div>
+{% endblock %}
+<!--</body>
 </html>

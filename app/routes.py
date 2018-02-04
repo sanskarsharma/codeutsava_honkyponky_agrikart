@@ -187,7 +187,7 @@ def each_product(category, product_id):
 @app_instance.route("/testing")
 def testing():
     #..
-    return render_template("cart.html")
+    return render_template("base1.html")
 
 @app_instance.route("/weather")
 def weather():
@@ -197,10 +197,10 @@ def weather():
     # json_data = r.json()    # suprise its a dict
     # print(json_data["city"])
 
-    area =  "raipur" #json_data["city"].lower()   # dictuu["city"] 
+    area =  "raipur" #json_data["city"].lower()   # dictuu["city"]
     # because ip is 127.0.0.1 for localhost always, which is not valid
 
- 
+
     from app.classes import Inner
 
     we = Weather()
@@ -214,14 +214,14 @@ def weather():
         inner_obj.condition = f.text()
         inner_obj.high = int((int(f.high()) - 32) * 5.0/9.0)
         inner_obj.low = int((int(f.low()) - 32) * 5.0/9.0)
-        
+
         list.append(inner_obj)
-    
+
     # res = json.dumps(dict)
     # res = json.loads(res)
     # #return res
 
-   
+
     return render_template('weather.html', outer = list)
 
 @app_instance.route("/fertilisers")
@@ -288,7 +288,7 @@ def market():
 def cart():
     return render_template("cart.html")
 # dict_in = {}
-#         dict_in["condition"] = 
+#         dict_in["condition"] =
 #         dict_in["high"] = (int(f.high()) - 32) * 5.0/9.0
 #         dict_in["low"] = (int(f.low()) - 32) * 5.0/9.0
 #         dict[str(f.date())]= dict_in
