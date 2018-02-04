@@ -1,18 +1,26 @@
-<html>
+{% extends "base1.html" %}
+
+
+
+{% block content %}
+
+
+
+<!-- <html>
 <head>
 <title>Agro site</title>
 <link href="static/css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- jQuery (Bootstrap's JavaScript plugins) -->
+<! jQuery (Bootstrap's JavaScript plugins) ->
 <script src="static/js/jquery.min.js"></script>
 <script src="static/js/bootstrap.min.js"></script>
-<!-- Custom Theme files -->
+<!- Custom Theme files ->
 <link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="static/css/ourstyle.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-
-<h3 align="center" style="color:#0000000;"> What is the difference between compost and fertiliser? </h3>
+<body> -->
+<div class="container" style="margin-top: 30px; margin-bottom:30px;">
+<h3 align="center" style="color:#000;"> What is the difference between compost and fertiliser? </h3>
 <br>
 You hear the terms ‘fertiliser’ and ‘compost’ a lot in gardening, but the difference isn't always clear.
 <p>
@@ -160,6 +168,8 @@ Problem areas such as saline spots, poorly drained depressions, and eroded knoll
 	<br>
 <a href="http://utbfc.utk.edu/Content%20Folders/Forages/Fertilization/Publications/PB1637.pdf" style="color:#46BECF" target="_blank">For detailed information, Download this!</a>
 
+</div>
+<!-- </body>
+</html> -->
 
-</body>
-</html>
+{% endblock %}
