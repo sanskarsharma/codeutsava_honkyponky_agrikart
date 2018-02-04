@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Agro site</title>
+{% if title %}
+<title>{{ title }} | Agricart</title>
+{% else %}
+<title>Welcome to Agricart</title>
+{% endif %}
 <link href="static/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (Bootstrap's JavaScript plugins) -->
 <script src="static/js/jquery.min.js"></script>
