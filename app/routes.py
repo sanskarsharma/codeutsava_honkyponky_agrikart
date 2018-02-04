@@ -232,6 +232,15 @@ def fertilisers():
 def government_schemes():
     return render_template("govt.html")
 
+@app_instance.route("/soil_health_info")
+def soil_health_info():
+    return render_template("soilhealthinfo.html")
+
+@app_instance.route("/farmer_advice")
+def farmer_advice():
+    return render_template("besttime.html")
+
+
 
 @app_instance.route("/market_analysis")
 def market_analysis():
