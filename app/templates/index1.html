@@ -132,25 +132,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	  <div class="container">
 			 <div class="header">
 			       <div class="logo">
-						 <a href="index.html"> <!--<img src="static/images/logo.png" alt=""/>--!></a>
+						 <a href="/index"> <img src="{{ url_for('static', filename='images/logo.png') }}" alt="" style="width:50px"/></a>
 				   </div>							 
 				  <div class="top-nav">										 
 						<label class="mobile_menu" for="mobile_menu">
 						<span>Menu</span>
 						</label>
-						<input id="mobile_menu" type="checkbox">-->
+						<input id="mobile_menu" type="checkbox">
 					   <ul class="nav">
-						  <li class="dropdown1"><a href="bicycles.html">Products</a>
+						  <li class="dropdown1"><a href="/showproducts">Products</a>
 							  <ul class="dropdown2">
-									<li><a href="bicycles.html">Inorganic Fertilizers</a></li>
-									<li><a href="bicycles.html">Organic Fertilizers</a></li>
-									<li><a href="bicycles.html">Tools</a></li>												
+									<li><a href="/products/2">Inorganic Fertilizers</a></li>
+									<li><a href="/products/3">Organic Fertilizers</a></li>
+									<li><a href="/products/1">Tools</a></li>												
 							  </ul>
 						  </li>
-						  <li class="dropdown1"><a href="parts.html">Information</a>
+						  <li class="dropdown1"><a href="#">Information</a>
 							 <ul class="dropdown2">
-									<li><a href="govt.html">Goverment Schemes</a></li>
-									<li><a href="fertilisers.html">Fertilisers</a>
+									<li><a href="/government_schemes">Goverment Schemes</a></li>
+									<li><a href="/fertilisers">Fertilisers</a>
                                      
 									</li>
 							  </ul>
@@ -165,15 +165,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							  </ul>
 						 </li> 
 
-						 <li><a href="#">Weather Status</a></li>
-                         <li><a href="#">Q/A Forum</a></li>     
-						              
+						 <li class="dropdown1"><a href="/weather">Weather Status</a></li>
+                         <!-- <li class="dropdown1"><a href="#">Q/A Forum</a></li>      -->
+						          
+						 {% if current_user.is_anonymous %}
 						 <li><a href="#" data-toggle="modal" data-target="#loginForm">LOGIN</a></li>
 						 <li><a href="#" data-toggle="modal" data-target="#REGISTERForm">SIGNUP</a></li>
-						 <!-- <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-							Launch demo modal
-						  </button>
-						  </li> -->
+						 {% else %}
+						 <li><a href="{{ url_for('user_profile', username=current_user.username) }}">Profile</a></li>
+						 <li><a href={{url_for("logout")}}>Logout</a></li>
+						 {% endif %}
 						  <a class="shop" href="/cart"><img src="static/images/cart.png" alt=""/></a>
 					  </ul>
 				 </div>
@@ -215,39 +216,55 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="modal-body">
                     <div class="title">
                         <h2 class="h4">REGISTRATION</h2> </div>
-                    <form action="#" data-form="validate" id="reg_without_verify" novalidate="novalidate">
-                       <div class="form-group">
-      <!-- <label for="email">Name:</label> -->
-      <input type="name" class="form-control" id="regname1" placeholder="Enter name" name="name" autofocus="">
-      <div id="regnameerror1" style="color:red;"></div>
-    </div>
-    <div class="form-group">
-      <!-- <label for="email">Contact No:</label> -->
-      <input type="phone" class="form-control" id="regphone1" placeholder="Enter Mobile No" name="phone" minlength="10" maxlength="10">
-      <div id="regmobileerror1" style="color:red;"></div>
-    </div>
-    <div class="form-group">
-      <!-- <label for="email">Address:</label> -->
-      <input type="address" class="form-control" id="regaddress1" placeholder="Enter Address" name="address">
-    </div>
-    <div class="form-group">
-      <!-- <label for="email">Email:</label> -->
-      <input type="email" class="form-control" id="regemail1" placeholder="Enter email" name="email">
-      <div id="regemailerror1" style="color:red;"></div>
-    </div>
-    <div class="form-group">
-      <!-- <label for="pwd">Password:</label> -->
-      <input type="password" class="form-control" id="regpwd1" placeholder="Enter password" name="pwd">
-      <div id="regpassworderror1" style="color:red;"></div>
-    </div>
-
-    <h4 id="serverError" style="color:red; display: none;"></h4>
-
-                        <input type="hidden" name="systpl" value="">
-                       <input type="submit" class="btn btn-block btn-default text-uppercase" value="Register">
-		 
-				</div>
-                    </form>
+						<form action="/register" method="post" data-form="validate" id="reg_without_verify" novalidate="novalidate">
+							
+							<div class="form-group">
+								<!-- <label for="email">Name:</label> -->
+								<input type="text" class="form-control" id="regname1" placeholder="Enter name" name="username" autofocus="">
+								<div id="regnameerror1" style="color:red;"></div>
+							</div>
+							<div class="form-group">
+								<!-- <label for="email">Email:</label> -->
+								<input type="email" class="form-control" id="regemail1" placeholder="Enter email" name="email">
+								<div id="regemailerror1" style="color:red;"></div>
+							</div>
+							<div class="form-group">
+								<!-- <label for="pwd">Password:</label> -->
+								<input type="password" class="form-control" id="regpwd1" placeholder="Enter password" name="password_hash">
+								<div id="regpassworderror1" style="color:red;"></div>
+							</div>
+							<div class="form-group">
+								<!-- <label for="email">Contact No:</label> -->
+								<input type="text" class="form-control" id="regphone1" placeholder="Enter State" name="state" minlength="10" maxlength="10">
+								<div id="regmobileerror1" style="color:red;"></div>
+							</div>
+							<div class="form-group">
+								<!-- <label for="email">Contact No:</label> -->
+								<input type="text" class="form-control" id="regphone1" placeholder="Enter District" name="district">
+								<div id="regmobileerror1" style="color:red;"></div>
+							</div>
+							<div class="form-group">
+								<!-- <label for="email">Contact No:</label> -->
+								<input type="text" class="form-control" id="regphone1" placeholder="Enter City" name="city">
+								<div id="regmobileerror1" style="color:red;"></div>
+							</div>
+							<div class="form-group">
+								<!-- <label for="email">Contact No:</label> -->
+								<input type="text" class="form-control" id="regphone1" placeholder="Enter Address" name="address">
+								<div id="regmobileerror1" style="color:red;"></div>
+							</div>
+							<div class="form-group">
+								<!-- <label for="email">Contact No:</label> -->
+								<input type="text" class="form-control" id="regphone1" placeholder="Enter Kisan ID" name="kisan_id">
+								<div id="regmobileerror1" style="color:red;"></div>
+							</div>
+						
+							<h4 id="serverError" style="color:red; display: none;"></h4>
+				
+							<input type="submit" class="btn btn-block btn-default text-uppercase" value="Register">
+						 
+						</div>
+					</form>
                 </div>
             </div>
         </div>
@@ -501,7 +518,7 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
         <form action="form.php" class="contact-form" method="post">
 
             <div class="form-group">
-              <input type="text" class="form-control" id="name" name="nm" placeholder="Name" required="" autofocus="">
+              <input type="text" class="form-control" id="name" name="nm" placeholder="Name" required="">
             </div>
 
 
