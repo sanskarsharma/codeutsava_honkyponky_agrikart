@@ -4,4 +4,11 @@ class Prices():
     high = ""
     low = ""
     close = ""
-    
+
+class Inner:
+    condition = ""
+    high = ""
+    low = ""
+    date =""
+
+

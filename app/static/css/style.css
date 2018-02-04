@@ -744,6 +744,8 @@ margin-bottom: 2em;
 	padding-bottom:1.5em;
 	text-align:center;
 	position:relative;
+	height: 380px;
+	margin-bottom: 20px;
 }
 .part-sec:hover div a.add-cart{
 	display:block;

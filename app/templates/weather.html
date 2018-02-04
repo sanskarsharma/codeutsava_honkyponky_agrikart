@@ -1,0 +1,139 @@
+{% extends "base1.html" %}
+
+
+{% block content %}
+
+<style>
+
+.weather-ul {
+    list-style: none;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.weather-li {
+    height: 215px;
+    width: 112px;
+    padding: 10px;
+    background: #f7f6f5;
+    cursor: pointer;
+    font-size: 0;
+    display: inline-block;
+    vertical-align: middle;
+    border-left: 1px solid #c8c8c8;
+    overflow: hidden;
+    position: relative;
+    padding: 15px;
+}
+.weather-div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    cursor: pointer;
+}
+.weather-h3-a {
+    -webkit-font-smoothing: antialiased;
+    color: #00afbe;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 10px 0;
+    display: block;
+    padding: 0;
+    margin: 0 0 2px;
+}
+.weather-h4 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    color: #999;
+    text-transform: uppercase;
+    padding-top: 0;
+    font-size: 12px;
+    margin-top: 0;
+}
+.weather-icon{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 60px;
+    margin-top: 20px;
+}
+.weather-info {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+.weather-info-text{
+    color: #1f384d;
+    display: block;
+    font-size: 12px;
+    margin-top: 22px;
+    margin-top: 10px;
+}
+</style>
+
+
+<div class="container" style="margin-top:20px; margin-bottom:20px;">
+<h2>WEATHER REPORT</h2>
+<br><br>
+
+<ul class="weather-ul row">
+{% for inner in outer %}
+    <li class="weather-li ">
+        <div class="weather-div bg bg-cl">
+            <h3><a href="#" class="weather-h3-a">{{inner.date}}</a></h3>
+            <!-- <h4 class="weather-h4">Feb 4</h4> -->
+            {% if inner.condition=="Mostly Sunny" %}
+                <div class="weather-icon" style="background-image: url(https://vortex.accuweather.com/adc2010/images/slate/icons/02.svg);"></div>
+            {% elif inner.condition=="Mostly Cloudy" %}
+                <div class="weather-icon" style="background-image: url(https://vortex.accuweather.com/adc2010/images/slate/icons/06.svg);"></div>
+            {% elif inner.condition=="Cloudy" %}
+                <div class="weather-icon" style="background-image: url(https://vortex.accuweather.com/adc2010/images/slate/icons/07.svg);"></div>
+            {% elif inner.condition == "Partly Cloudy" %}
+                <div class="weather-icon" style="background-image: url(https://vortex.accuweather.com/adc2010/images/slate/icons/04.svg);"></div>
+            {% elif inner.condition == "Sunny" %}
+                <div class="weather-icon" style="background-image: url(https://vortex.accuweather.com/adc2010/images/slate/icons/01.svg);"></div>
+            {% endif %}
+            <div class="weather-info">
+                <div class="temp">
+                    <span class="large-temp" style="font-size:15px;">{{inner.high}}&deg;C/</span>
+                    <span class="small-temp" style="font-size:15px;">{{inner.low}}&deg;C</span>
+                </div>
+            <span class="weather-info-text cond">{{inner.condition}}</span>
+        </div>
+    </li>
+{% endfor %}
+</ul>
+
+<div class="container" id="bottom" style="width: 100%; background-color: #4c43434d; display: none;">
+    hello
+</div>
+</div>
+
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('.weather-li').click(function(){
+            $('.weather-li').forEach(function() {
+                $('#bottom').show();
+            });
+        });
+    });
+</script>
+
+{% endblock %}
