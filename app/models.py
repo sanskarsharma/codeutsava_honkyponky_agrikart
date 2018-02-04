@@ -69,6 +69,14 @@ class Product(db_instance.Model):
     def __repr__(self):                             # this method tells Python how to print objects of this class, which is going to be useful for debugging. 
         return "<Product {} , {},  {}>".format(self.id,self.name, self.mrp)
 
+class Contact(db_instance.Model):
+    phone_number = db_instance.Column(db_instance.String)
+    email = db_instance.Column(db_instance.String)
+    message = db_instance.Column(db_instance.String)
+    name = db_instance.Column(db_instance.String)
+    id = db_instance.Column(db_instance.Integer, primary_key=True, autoincrement=True)
+
+
 
 
 

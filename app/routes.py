@@ -292,3 +292,19 @@ def cart():
 #         dict_in["high"] = (int(f.high()) - 32) * 5.0/9.0
 #         dict_in["low"] = (int(f.low()) - 32) * 5.0/9.0
 #         dict[str(f.date())]= dict_in
+
+
+@app_instance.route("/contact_us")
+def contact_us():
+    name = request.form.get("nm")
+    email = request.form.get("em")
+    phone = request.form.get("pb")
+    message = request.form.get("FB")
+    con_obj = Contact(name=name,email=email,phone_number=phone,message=message)
+    db_instance.session.add(con_obj)
+    db_instance.session.commit()
+    flash("Thanks for contacting, we will get back to you soon")
+    return redirect(url_for("index"))
+
+    
+    
