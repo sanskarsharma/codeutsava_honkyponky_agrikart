@@ -201,7 +201,7 @@ def weather():
     # because ip is 127.0.0.1 for localhost always, which is not valid
 
  
-    from app.classes import Outer,Inner
+    from app.classes import Inner
 
     we = Weather()
     loc = we.lookup_by_location(area)
