@@ -1,0 +1,40 @@
+Thunderstorms help in fixing atmospheric N into the soils in the form fertilizer.
+
+Generally, in areas of higher temperature, atmospheric pressure is low and in areas of low-temperature pressure is high. 
+
+Wind direction and velocity is important for agricultural crop production. 
+
+rainfall effects
+Germination: Proper moisture is essential for seed germination. Different crops have different moisture requirement for germination and complete life cycle. Wheat seed requires 55% water absorption compared to its weight for germination. Mustard requires less water absorption. T. Aman and jute requires more rainfall to grow. Chili and Potato seed damages with higher rainfall.
+N Fertilization: Atmospheric N added to the soil through rainfall.
+Tillage and intercultural operations: Better performed under field capacity and wet condition depending on crops. Upland farming needs special practices.
+Insects, pests/diseases/weeds: kharif-1> kharif-2> rabi due comparatively higher rainfall and excess moisture.
+Photosynthesis: Less Net photosynthesis in more cloudy days.
+Growth, development and yield: rabi> kharif-2> kharif-1 due to comparatively controlled moisture contents.
+Soil erosion: higher in excessive rainfall and open field.
+Product quality: rabi> kharif-2> kharif-1 due comparatively controlled.
+Moisture contents: Grapes ate sour in rainy seasons.
+
+
+temp effect
+Germination: Proper temperature is essential for seed germination. Too high and too low temperature prohibits seed germination. Different crops have different term requirement for germination and complete life cycle.
+Photosynthesis: Occurs within -6 to 370 Growth, development and yield: Production of dry matter occurs when soil temperature ranges bet 20-30 0C.
+Flower initiation: Certain crops require low temperature for flower initiation and Flowering. E.g. Cabbage, cauliflower, carrot turnip etc flower in low temperature.
+Life span: rabi> kharif-2> kharif-1 due to comparatively reduced respiration rate.
+Transpiration/evaporation: kharif-1> kharif-2> rabi due comparatively higher temperature.
+Insects, pests/diseases/weeds: Transpiration/evaporation: kharif-1> kharif-2> rabi due comparatively higher temperature.
+Product quality: better quality in relatively low temperature (depending on crops)
+Yield: rabi> kharif-2> kharif-1 due to comparatively reduced respiration rate and higher net photosynthetic rate
+
+
+
+
+
+news 
+http://www.agriwatch.com/
+http://agmarknet.gov.in/RelatedSites/Default.aspx
+https://data.gov.in/keywords/commodity-prices
+
+
+alphavantage api key
+WRRV1W3LLQEC5MKX

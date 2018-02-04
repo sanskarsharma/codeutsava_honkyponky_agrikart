@@ -16,6 +16,14 @@ class RegistrationForm(FlaskForm):
 	password2 = PasswordField("Re-enter password", validators= [DataRequired(), EqualTo("password")])
 	submit = SubmitField("Register !!!")
 
+	phone_number = StringField("Enter contact number", validators =[DataRequired()])
+	state = StringField("Select State", validators =[DataRequired()])
+	district = StringField("Enter district", validators =[DataRequired()])
+	city = StringField("Enter city/town/village", validators =[DataRequired()])
+	address = StringField("Enter complete address", validators =[DataRequired()])
+	kisan_id = StringField("Enter your unique kisan id", validators =[DataRequired()])
+
+
 	def validate_username(self, username):
 		user_obj = User.query.filter_by(username= username.data).first()
 		if user_obj is not None:

@@ -12,6 +12,7 @@ import json
 import requests
 
 from pyfcm import FCMNotification
+from app.classes import Prices
 
 @app_instance.route('/')
 @app_instance.route('/index')       		# these are called decorators
@@ -223,5 +224,33 @@ def government_schemes():
     return render_template("govt.html")
 
 
+@app_instance.route("/market_analysis")
+def market_analysis():
+    apple = "AAPL"
+    guava = "GOOG"
+    mango = "MSFT"
+    berries = "IBM"
+    avacado = "AMZN"
+    peach = "TSLA"
 
+    fruit = apple
+
+    api = requests.get(url = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="+ fruit+"&apikey=WRRV1W3LLQEC5MKX")
+    json_data = api.json()
+    need = json_data["Time Series (Daily)"]
+    #n = need["2018-01-09"]
+    #print(type(n))
+    list = []
+
+    for m, n in need.items():
+        obj = Prices()
+        obj.date =  m
+        obj.open = n["1. open"]
+        obj.high = n["1. high"]
+        obj.low = n["1. low"]
+        obj.close = n["1. close"]
+        list.append(obj)
+
+        
+    return render_template("market_analysis.html", list = list)
     
