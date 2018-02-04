@@ -255,9 +255,9 @@ def market_analysis():
         obj = Prices()
         obj.date =  m
         obj.open = n["1. open"]
-        obj.high = n["1. high"]
-        obj.low = n["1. low"]
-        obj.close = n["1. close"]
+        obj.high = n["2. high"]
+        obj.low = n["3. low"]
+        obj.close = n["4. close"]
         list.append(obj)
 
         
